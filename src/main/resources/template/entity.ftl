@@ -1,11 +1,19 @@
 package ${data.packagePath}.${data.module}.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * TABLE_NAME:(${data.tableName})
  *
  */
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class ${data.className} {
 
 <#list data.columns as c>
@@ -14,17 +22,6 @@ public class ${data.className} {
 	 */
 	private ${c.propertyType} ${c.propertyName};
 </#list>	
-	
-<#list data.columns as c>
-    
-	public ${c.propertyType} get${c.methodName}() {
-		return ${c.propertyName};
-	}
-    
-	public void set${c.methodName}(${c.propertyType} ${c.propertyName}) {
-		this.${c.propertyName} = ${c.propertyName};
-	}
-</#list>
 	
 
 }

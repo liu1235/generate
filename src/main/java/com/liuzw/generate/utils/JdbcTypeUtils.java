@@ -8,7 +8,7 @@ import java.util.Properties;
  * @author 刘泽伟
  */
 public class JdbcTypeUtils {
-	private static Properties config = null;
+	private static Properties config;
 
 	static {
 		InputStream in = JdbcTypeUtils.class.getClassLoader()

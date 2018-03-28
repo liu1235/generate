@@ -88,7 +88,7 @@ public class GenerateServiceImpl implements IGenerateService {
     }
     @Override
     public MessageResp generateDao(String tableNames) {
-        return generate(tableNames,"mapper.ftl","Dao.java","/mapper");
+        return generate(tableNames,"dao.ftl","Dao.java","/mapper");
     }
 
     @Override

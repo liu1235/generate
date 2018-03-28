@@ -50,13 +50,13 @@ public class GenerateTest extends AbstractTransactionalJUnit4SpringContextTests 
 	
 	@Test
 	public void generateMapper(){
-		String tableNames="t_hr_time_outside_bill";
+		String tableNames="t_service_order_scan";
 		generateService.generateMapper(tableNames);
 	}
 
 	@Test
 	public void generateAll(){
-		String tableNames="t_hr_time_outside_bill";
+		String tableNames="t_push_message";
 		generateService.generateAll(tableNames);
 	}
 
